@@ -4,7 +4,7 @@ Feature: Test Checkout Process
   Scenario: Test web checkout process
     Given user go to login page
     And user input username "standard_user"
-    And user input password "secret_sauce"
+    And user input pwd "secret_sauce"
     And user click login button
     Then user verify see cart icon
     And user click add to cart

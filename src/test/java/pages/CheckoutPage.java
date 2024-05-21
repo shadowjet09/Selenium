@@ -48,7 +48,6 @@ public class CheckoutPage {
     }
 
     public void verifyBtnCheckout() {
-        By btn_checkout = By.id("checkout");
         assertThat(driver.findElement(btn_checkout).isDisplayed()).isTrue();
     }
 }

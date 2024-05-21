@@ -15,31 +15,6 @@ public class CheckoutStep {
         this.checkoutPage = new CheckoutPage();
     }
 
-    @Given("user go to login page")
-    public void userGoToLoginPage() {
-        webPage.goToLoginPage();
-    }
-
-    @And("user input username {string}")
-    public void userInputUsername(String username) {
-        webPage.inputUsername(username);
-    }
-
-    @And("user input password {string}")
-    public void userInputPwd(String pwd) {
-        webPage.inputPassword(pwd);
-    }
-
-    @And("user click login button")
-    public void userClickLoginButton() {
-        webPage.clickBtnLogin();
-    }
-
-    @Then("user verify see cart icon")
-    public void userVerifySeeCartIcon() {
-        webPage.verifyIconCart();
-    }
-
     @And("user click add to cart")
     public void userClickAddToCart() {
         webPage.itemAddToCart();
