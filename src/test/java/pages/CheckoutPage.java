@@ -7,14 +7,18 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class CheckoutPage {
 
-    By btn_checkout = By.id("checkout");
+    By btn_checkout = By.xpath("//*[@id=\"checkout\"]");
     By input_firstName = By.id("first-name");
     By input_lastName = By.id("last-name");
     By input_postalCode = By.id("postal-code");
     By btn_continue = By.id("continue");
     By btn_finish = By.id("finish");
-    By thank_you_page = By.xpath("//h2[text()='THANK YOU FOR YOUR ORDER']");
+    By thank_you_page = By.xpath("//h2[text()='Thank you for your order!']");
 
+
+    public void verifyBtnCheckout() {
+        assertThat(driver.findElement(btn_checkout).isDisplayed()).isTrue();
+    }
     public void clickBtnCheckout() {
         driver.findElement(btn_checkout).click();
     }
@@ -45,9 +49,5 @@ public class CheckoutPage {
 
     public void verifyThankYouPage() {
         assertThat(driver.findElement(thank_you_page).isDisplayed()).isTrue();
-    }
-
-    public void verifyBtnCheckout() {
-        assertThat(driver.findElement(btn_checkout).isDisplayed()).isTrue();
     }
 }

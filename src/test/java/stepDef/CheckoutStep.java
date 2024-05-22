@@ -15,11 +15,6 @@ public class CheckoutStep {
         this.checkoutPage = new CheckoutPage();
     }
 
-    @And("user click add to cart")
-    public void userClickAddToCart() {
-        webPage.itemAddToCart();
-    }
-
     @And("user click cart icon")
     public void userClickCartIcon() {
         webPage.verifyIconCart();
