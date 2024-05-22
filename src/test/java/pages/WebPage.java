@@ -84,4 +84,8 @@ public class WebPage {
 
         assertThat(itemBefore).isNotEqualTo(itemAfter);
     }
+
+    public void clickIconCart() {
+        driver.findElement(icon_cart).click();
+    }
 }

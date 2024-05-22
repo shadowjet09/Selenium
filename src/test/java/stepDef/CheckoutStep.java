@@ -17,7 +17,7 @@ public class CheckoutStep {
 
     @And("user click cart icon")
     public void userClickCartIcon() {
-        webPage.verifyIconCart();
+        webPage.clickIconCart();
     }
 
     @Then("user verify see checkout button")
